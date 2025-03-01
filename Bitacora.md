@@ -48,23 +48,21 @@
     # Utilizar python para filtrar
 
 # Problema 11
+    Mostrar los árboles de mi barrio en el sitio web
 
+# Problema 12
+    Dónde encontrar datos puntuales de mi barrio
+    # Solución: no se encontraron. Por lo tanto, se creó un archivo del equipamiento y sus coordenadas
+                luego se subió a QGIS y desde allí se exportó como GeoJSON.
 
+# Problema 13
+    Mostrar botón para Equipamiento en Página Web.
 
+# Problema 14
+    Crear controlador para botón de Equipamiento.
 
-# Problema 
-    Dónde encontrar dato de puestos de votación
-    # Se encuentran en https://datosabiertos.bogota.gov.co/en/dataset/puesto-de-votacion
-
-# problema 
-    Filtrar solamente los puestos de votación de mi barrio. 
-    # Se utiliza el google colab ya empleado para filtrar los árboles.
-
-# Problema 
-    Mostrar botón para obras de mejoramiento
-
-# Problema
-    Crear controlador para botón de obras de mejoramiento
+# Problema 15
+    Mostrar el equipamiento luego del evento Click. 
 
 
     

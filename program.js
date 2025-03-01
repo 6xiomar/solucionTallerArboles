@@ -55,7 +55,7 @@ buttonTrees.addEventListener('click',
 );
 
 
-// Elemento 3: Distancias entre árboles
+// Elemento 4: Distancias entre árboles
 
 // manejador para las distancias entre árboles
 let buttonDistances = document.getElementById("buttonDistances");
@@ -112,12 +112,12 @@ function generatePDF(distances, totalTrees){
 }
 
 
-// Elemento 5: Puestos de votación
+// Elemento 5: Equipamiento
 
-// manejador para los árboles
+// manejador para Equipamiento
 let buttonPlaces = document.getElementById("buttonPlaces");
 
-// Respuesta al click del botón Puestos de votación
+// Respuesta al click del botón Equipamiento
 buttonPlaces.addEventListener('click', 
     async ()=>{
         let myData3 = await fetch('equipamientoGranColombia.geojson'); // al hacer esto él trae el archivo como Texto
