@@ -44,7 +44,11 @@
     # Solucion: Utilizar Python para filtrar los datos. https://colab.research.google.com/drive/1CLUMQ5HufSqLbGJ83q9ZgbEPs9D_jVpg?usp=sharing
 
 # Problena 10
-    Intersectar árboles con mi barrio.
+    Filtrar solamente los árboles de mi barrio
+    # Utilizar python para filtrar
+
+# Problema 11
+    
 
 
 
