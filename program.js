@@ -10,13 +10,19 @@ async function loadPolygon(){
 
     let myData = await fetch('barrioGranColombia.geojson'); // al hacer esto él trae el archivo como Texto
     let myPolygon = await myData.json(); // así qye se convierte a json
-    L.geoJSON(myPolygon, 
-        {
-            style:{
-                color: 'purple'
-            }
-        }
-        ).addTo(map) // se carga con función de leaflet
+    L.geoJSON(
+                myPolygon, 
+                {
+                    style:{
+                        color: 'purple'
+                    }
+                }
+            ).addTo(map) // se carga con función de leaflet
 }
 
-loadPolygon()
+loadPolygon() // se llama la función que acabamos de crear
+
+// manejador para los árboles
+let buttonTrees = document.getElementById('buttonTrees');
+
+buttonTrees.addEventListener('click', ()=>alert("Hola"));

@@ -26,5 +26,8 @@
     Cargar polígono de mi barrio, se encuentra en formato GeoJSON
     # Se
 
+# Problema 6
+    Crear un botón y asignarle un manejador de eventos.
+    # Solucion: colocar etiqueta html, 
 
 
