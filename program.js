@@ -55,4 +55,42 @@ buttonTrees.addEventListener('click',
 );
 
 
+// Elemento 3: Distancias entre árboles
 
+// manejador para las distancias entre árboles
+let buttonDistances = document.getElementById("buttonDistances");
+
+buttonDistances.addEventListener('click', 
+    async ()=>{
+        let myData2 = await fetch('arbolesGranColombia.geojson');
+        let myTrees = await myData2.json();
+        let arrayTrees = myTrees.features.map((myElement, index)=>({
+            id: index+1,
+            coordinates: myElement.geometry.coordinates
+        }));
+        // Arreglo para guardar distancias del árbol con todos los demás árboles.
+        let distances =[];
+        arrayTrees.forEach((treeA)=>{arrayTrees.forEach(
+                (treeB)=>{
+                    // Calculo de distancias entre el árbolA y los demás.
+                    if(treeA.id != treeB.id){
+                        let distance = turf.distance(
+                            turf.point(treeA.coordinates), 
+                            turf.point(treeB.coordinates),
+                        );
+                        distances.push(
+                            [
+                                `Árbol ${treeA.id}`,
+                                `Árbol ${treeB.id}`,
+                                distance.toFixed(3)     //como la genera con un double, se redondea para que no salga con tantos decimales
+                            ]
+                        )
+                    }
+                    
+                }
+            )
+        })
+
+        console.log(distances)
+    }
+)
