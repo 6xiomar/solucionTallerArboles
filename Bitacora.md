@@ -11,5 +11,20 @@
         - Si aparece el error de que no deja publicar el brunch, se eliminan las credenciales y se intenta de nuevo
         - Luego de esto, se ingresa el token y ya permite realizar commits.
 
+# Problema 3
+    Crear una página que muestre un mapa centrado en mi barrio. 
+    #  Solución Propuesta
+        - Utilizar una biblioteca de visor geográfico: leaflet, openlayers, mapopen.
+
+# Problema 4
+    Mostrar un polígono de mi barrio
+    # Solución propuesta
+        - Buscar si hay un GeoJSON de mi barrio o un shape
+        - Se busca y encuentra en https://bogota-laburbano.opendatasoft.com/pages/home/
+
+# Problema 5
+    Cargar polígono de mi barrio, se encuentra en formato GeoJSON
+    # Se
+
 
 
