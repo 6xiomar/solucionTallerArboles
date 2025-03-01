@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "equipamientoGranColombia",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Nombre": "Salón Comunal", "Latitud": 4.5679187205384624, "Longitud": -74.069528841237357 }, "geometry": { "type": "Point", "coordinates": [ -74.069528841237357, 4.567918720538462 ] } },
+{ "type": "Feature", "properties": { "Nombre": "Cancha de Microfutbol", "Latitud": 4.5680203207234484, "Longitud": -74.06963076517593 }, "geometry": { "type": "Point", "coordinates": [ -74.06963076517593, 4.568020320723448 ] } },
+{ "type": "Feature", "properties": { "Nombre": "Jardín infantil", "Latitud": 4.5681370455600927, "Longitud": -74.069756661501884 }, "geometry": { "type": "Point", "coordinates": [ -74.069756661501884, 4.568137045560093 ] } },
+{ "type": "Feature", "properties": { "Nombre": "Escuelita", "Latitud": 4.5674303144954846, "Longitud": -74.068835899716035 }, "geometry": { "type": "Point", "coordinates": [ -74.068835899716035, 4.567430314495485 ] } }
+]
+}

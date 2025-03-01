@@ -112,3 +112,28 @@ function generatePDF(distances, totalTrees){
 }
 
 
+// Elemento 5: Puestos de votación
+
+// manejador para los árboles
+let buttonPlaces = document.getElementById("buttonPlaces");
+
+// Respuesta al click del botón Puestos de votación
+buttonPlaces.addEventListener('click', 
+    async ()=>{
+        let myData3 = await fetch('equipamientoGranColombia.geojson'); // al hacer esto él trae el archivo como Texto
+        let myPlaces = await myData3.json(); // así qye se convierte a json
+        L.geoJSON(myPlaces, {
+            pointToLayer: function(feature, latlng) {
+                return L.circleMarker(latlng, {
+                    radius: 6, // Tamaño del punto
+                    fillColor: "blue", // Color del relleno
+                    color: "darkblue", // Color del borde
+                    weight: 1, // Grosor del borde
+                    opacity: 1, // Opacidad del borde
+                    fillOpacity: 0.5 // Opacidad del relleno
+                })
+            }
+        }).addTo(map) // se carga con función de leaflet
+    }
+);
+

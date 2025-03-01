@@ -48,6 +48,25 @@
     # Utilizar python para filtrar
 
 # Problema 11
+
+
+
+
+# Problema 
+    Dónde encontrar dato de puestos de votación
+    # Se encuentran en https://datosabiertos.bogota.gov.co/en/dataset/puesto-de-votacion
+
+# problema 
+    Filtrar solamente los puestos de votación de mi barrio. 
+    # Se utiliza el google colab ya empleado para filtrar los árboles.
+
+# Problema 
+    Mostrar botón para obras de mejoramiento
+
+# Problema
+    Crear controlador para botón de obras de mejoramiento
+
+
     
 
 
