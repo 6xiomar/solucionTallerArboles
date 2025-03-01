@@ -70,13 +70,13 @@ buttonDistances.addEventListener('click',
         }));
         // Arreglo para guardar distancias del árbol con todos los demás árboles.
         let distances =[];
-        arrayTrees.forEach((treeA)=>{arrayTrees.forEach(
+        arrayTrees.forEach( (treeA)=>{arrayTrees.forEach(
                 (treeB)=>{
                     // Calculo de distancias entre el árbolA y los demás.
                     if(treeA.id != treeB.id){
                         let distance = turf.distance(
                             turf.point(treeA.coordinates), 
-                            turf.point(treeB.coordinates),
+                            turf.point(treeB.coordinates)
                         );
                         distances.push(
                             [
@@ -90,7 +90,25 @@ buttonDistances.addEventListener('click',
                 }
             )
         })
-
-        console.log(distances)
+        generatePDF(distances, arrayTrees.lenght);
     }
 )
+
+
+function generatePDF(distances, totalTrees){
+
+    let {jsPDF} = window.jspdf;
+    let documentPDF = new jsPDF();
+
+    documentPDF.text("Distancia entre los Árboles del Barrio La Gran Colombia",10,10);
+
+    documentPDF.autoTable(
+        {
+            head: [['Árbol 1', 'Árbol 2', 'Distancia']],
+            body: distances
+        }
+    );
+    documentPDF.save("GranColombia.pdf")
+}
+
+
