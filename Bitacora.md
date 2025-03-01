@@ -28,6 +28,27 @@
 
 # Problema 6
     Crear un botón y asignarle un manejador de eventos.
-    # Solucion: colocar etiqueta html, 
+    # Solucion: colocar etiqueta html, y crear un manejador de eventos para esa etiqueta en java script
+
+# Problema 7
+    Buscar los árboles de Bogotá, una capa o un geoJSON
+    # Solucion: se encontraron en https://datosabiertos.bogota.gov.co/dataset/censo-arbolado-urbano
+                allí, se hace uso del Servicio REST, para poder filtrar los datos y no tener que descargar todos los árboles de Bogotá.
+
+# Problema 8
+    Crear el bbox de mi barrio en el servicio 
+    # Solucion: Se utiliza la página https://geojson.io/#map=17.68/4.567808/-74.070027 y se hace el bbox.
+
+# Problema 9
+    Descargar los datos de árboles filtrados, desde la api: servicio rest. 
+    # Solucion: Utilizar Python para filtrar los datos. https://colab.research.google.com/drive/1CLUMQ5HufSqLbGJ83q9ZgbEPs9D_jVpg?usp=sharing
+
+# Problena 10
+    Intersectar árboles con mi barrio.
+
+
+
+
+
 
 
