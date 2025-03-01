@@ -32,27 +32,27 @@ loadPolygon() // se llama la función que acabamos de crear
 // Elemento 3: Árboles
 
 // manejador para los árboles
-let buttonTrees = document.getElementById('buttonTrees');
-
-// Función para cargar árboles
-async function loadTrees(){
-
-    let myData2 = await fetch('arbolesGranColombia.geojson'); // al hacer esto él trae el archivo como Texto
-    let myTrees = await myData2.json(); // así qye se convierte a json
-    L.geoJSON(myTrees, {
-        pointToLayer: function(feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 6, // Tamaño del punto
-                fillColor: "green", // Color del relleno
-                color: "darkgreen", // Color del borde
-                weight: 1, // Grosor del borde
-                opacity: 1, // Opacidad del borde
-                fillOpacity: 0.8 // Opacidad del relleno
-            }).bindPopup(`Árbol: ${feature.properties.nombre || "Desconocido"}`); // Popup opcional
-        }
-    }
-            ).addTo(map) // se carga con función de leaflet
-}
+let buttonTrees = document.getElementById("buttonTrees");
 
 // Respuesta al click
-buttonTrees.addEventListener('click', ()=>loadTrees());
+buttonTrees.addEventListener('click', 
+    async ()=>{
+        let myData2 = await fetch('arbolesGranColombia.geojson'); // al hacer esto él trae el archivo como Texto
+        let myTrees = await myData2.json(); // así qye se convierte a json
+        L.geoJSON(myTrees, {
+            pointToLayer: function(feature, latlng) {
+                return L.circleMarker(latlng, {
+                    radius: 6, // Tamaño del punto
+                    fillColor: "green", // Color del relleno
+                    color: "darkgreen", // Color del borde
+                    weight: 1, // Grosor del borde
+                    opacity: 1, // Opacidad del borde
+                    fillOpacity: 0.5 // Opacidad del relleno
+                })
+            }
+        }).addTo(map) // se carga con función de leaflet
+    }
+);
+
+
+

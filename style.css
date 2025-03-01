@@ -1,11 +1,21 @@
-#map { height: 100%; }
+#map { 
+    height: 100%; 
+}
 
 #buttonContainer{
-    position: relative;
+    position: absolute;
     top: 10px;
     left: 100px;
     z-index: 1000; 
+}
 
-};
+.buttons{
+
+    background-color: rgb(0, 150, 5);
+    color: rgb(206, 208, 235);
+    height: 30px;
+    width: 120px;
+    font-size: 20px;
+}
 
 
