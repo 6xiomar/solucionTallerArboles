@@ -22,7 +22,24 @@ async function loadPolygon(){
 
 loadPolygon() // se llama la función que acabamos de crear
 
+
+// Elemento 3: Árboles
 // manejador para los árboles
 let buttonTrees = document.getElementById('buttonTrees');
 
-buttonTrees.addEventListener('click', ()=>alert("Hola"));
+async function loadTrees(){
+
+    let myData2 = await fetch('arbolesGranColombia.geojson'); // al hacer esto él trae el archivo como Texto
+    let myTrees = await myData2.json(); // así qye se convierte a json
+    L.geoJSON(
+                myTrees, 
+                {
+                    style:{
+                        color: 'green'
+                    }
+                }
+            ).addTo(map) // se carga con función de leaflet
+}
+
+
+buttonTrees.addEventListener('click', ()=>loadTrees());
